@@ -1,0 +1,22 @@
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+#map {
+  width:70%;
+  height:100%;
+  float:left;
+}
+
+#console{
+  width:30%;
+  height:100%;
+  background-color:lightblue;
+  float:right;
+}
+
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
