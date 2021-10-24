@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Marker Labels</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script src="./index.js"></script>
+  </head>
+  <body>
+    <div id="map">
+    </div>
+    <div id="console">
+<center>검색 결과<center>
+    </div>
+     
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClNodkL2bq_udPAJQ5AX1B9TFBFLJK9FQ&callback=initMap&v=weekly"
+      async
+    ></script>
+<script>
+function initMap() {
+  const myLatLng = { lat: 37, lng: 127 };
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 12,
+    center: myLatLng,
+  });
+
+  new google.maps.Marker({
+    position: myLatLng,
+    map,
+    title: "Hello World!",
+  });
+}
+</script>
+  </body>
+</html>
